@@ -1,4 +1,4 @@
-/* Reset & Global */
+
 * {
   padding: 0;
   margin: 0;
@@ -10,12 +10,12 @@
 }
 
 :root {
-  --main-color: #d98880;   /* Warm muted pink */
-  --accent-color: #b08497; /* Muted lavender/rose */
-  --secondary-color: #e6c7c2; /* Soft pastel cream-pink */
+  --main-color: #d98880;   
+  --accent-color: #b08497; 
+  --secondary-color: #e6c7c2; 
   --text-color: #fdfdfd;
-  --bg-color: #1f1b24;  /* Deep elegant background */
-  --card-bg: #2a2432;   /* Card background with contrast */
+  --bg-color: #1f1b24;  
+  --card-bg: #2a2432;   
   --big-font: 4rem;
   --h2-font: 2.25rem;
   --p-font: 0.95rem;
