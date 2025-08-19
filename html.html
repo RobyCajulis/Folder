@@ -14,7 +14,7 @@
 <!-- Header -->
 <header>
   <a href="#" class="logo">MyPortfolio</a>
-  <div class="bx bx-menu" id="menu-icon"></div>
+
   <ul class="navbar">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
@@ -22,6 +22,11 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+
+  <!-- Dark/Light Mode Toggle -->
+  <button class="toggle-theme" id="theme-toggle" aria-label="Toggle theme">
+    <i class='bx bx-moon' id="theme-icon" aria-hidden="true"></i>
+  </button>
 </header>
 
 <!-- Home Section -->
@@ -39,7 +44,7 @@
 <!-- About Section -->
 <section class="about" id="about">
   <div class="about-img">
-    <img src="about-me.png" alt="About Me">
+    <img src="m2.jpg" alt="About Me">
   </div>
   <div class="about-text">
     <span>About Me</span>
@@ -58,29 +63,34 @@
     <span>Portfolio</span>
     <h2>My Projects</h2>
   </div>
-  <div class="box">
-    <div class="box-img">
-      <img src="project1.png" alt="Project 1">
+
+  <div class="cards">
+    <div class="box">
+      <div class="box-img">
+        <img src="f1.jpg" alt="Project 1">
+      </div>
+      <h2>Foodie - College Website Project</h2>
+      <h3>Web Application</h3>
+      <span>HTML | CSS | JS</span>
     </div>
-    <h2>Project One</h2>
-    <h3>Web Application</h3>
-    <span>HTML | CSS | JS</span>
-  </div>
-  <div class="box">
-    <div class="box-img">
-      <img src="project2.png" alt="Project 2">
+
+    <div class="box">
+      <div class="box-img">
+        <img src="tt.jpg" alt="Project 2">
+      </div>
+      <h2>Tic A Tac A Toe - A Mobile Application College Project</h2>
+      <h3>Mobile App</h3>
+      <span>GODOT</span>
     </div>
-    <h2>Project Two</h2>
-    <h3>Mobile App</h3>
-    <span>React Native</span>
-  </div>
-  <div class="box">
-    <div class="box-img">
-      <img src="project3.png" alt="Project 3">
+
+    <div class="box">
+      <div class="box-img">
+        <img src="ff1.jpg" alt="Project 3">
+      </div>
+      <h2>SchoolFund Hub Application For Students</h2>
+      <h3>Design System</h3>
+      <span>Figma | UI/UX</span>
     </div>
-    <h2>Project Three</h2>
-    <h3>Design System</h3>
-    <span>Figma | UI/UX</span>
   </div>
 </section>
 
@@ -90,17 +100,20 @@
     <span>My Skills</span>
     <h2>What I Do</h2>
   </div>
+
   <div class="service-container">
     <div class="s-box">
       <i class='bx bx-code-alt'></i>
       <h3>Web Development</h3>
       <p>Building responsive and modern websites with HTML, CSS, JavaScript, and frameworks.</p>
     </div>
+
     <div class="s-box">
       <i class='bx bx-mobile'></i>
       <h3>Mobile Apps</h3>
       <p>Creating cross-platform apps with React Native for seamless user experience.</p>
     </div>
+
     <div class="s-box">
       <i class='bx bx-paint'></i>
       <h3>UI/UX Design</h3>
@@ -109,7 +122,7 @@
   </div>
 </section>
 
-<!-- Contact Section -->
+<!-- Contact/Footer -->
 <section id="contact">
   <div class="footer">
     <div class="main">
@@ -123,14 +136,16 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
+
       <div class="col">
         <h4>Contact Info</h4>
         <ul>
-          <li>Email: yourname@email.com</li>
-          <li>Phone: +123 456 7890</li>
-          <li>Location: Your City, Country</li>
+          <li>Email: robycajulis01@gmail.com</li>
+          <li>Phone: +961 799 6969</li>
+          <li>Location: Malolos City, Bulacan</li>
         </ul>
       </div>
+
       <div class="col">
         <h4>Follow Me</h4>
         <div class="social">
@@ -144,6 +159,7 @@
   </div>
 </section>
 
-<script src="script.js"></script>
+
+<script src="javascript.js"></script>
 </body>
 </html>
