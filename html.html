@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,158 +9,173 @@
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<!-- Header -->
-<header>
-  <a href="#" class="logo">MyPortfolio</a>
+  <!-- Header -->
+  <header>
+    <a href="#" class="logo">MyPortfolio</a>
 
-  <ul class="navbar">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+    <ul class="navbar">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
 
-  <!-- Dark/Light Mode Toggle -->
-  <button class="toggle-theme" id="theme-toggle" aria-label="Toggle theme">
-    <i class='bx bx-moon' id="theme-icon" aria-hidden="true"></i>
-  </button>
-</header>
+    <!-- darkmode light mode -->
+    <button class="toggle-theme" id="theme-toggle" aria-label="Toggle theme">
+      <i class='bx bx-moon' id="theme-icon" aria-hidden="true"></i>
+    </button>
+  </header>
 
-<!-- Home Section -->
-<section class="home" id="home">
-  <div class="home-text">
-    <h1>Hello, I'm <span>Rossbrent J.Cajulis</span></h1>
-    <h2>Aspiring Web Developer & Designer</h2>
-    <a href="#projects" class="btn">View My Work</a>
-  </div>
-  <div class="home-img">
-    <img src="neckless.png" alt="Your Profile Picture">
-  </div>
-</section>
+  <!-- Home Section -->
+  <section class="home" id="home">
+    <div class="home-text">
+      <h1>Hello, I'm <span>Rossbrent J.Cajulis</span></h1>
+      <h2>Aspiring Web Developer & Designer</h2>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+    <div class="home-img">
+      <img src="neckless.png" alt="Your Profile Picture">
+    </div>
+  </section>
 
-<!-- About Section -->
-<section class="about" id="about">
-  <div class="about-img">
-    <img src="m2.jpg" alt="About Me">
-  </div>
-  <div class="about-text">
-    <span>About Me</span>
-    <h2>Who Am I?</h2>
-    <p>
-      I'm a passionate web developer who loves creating clean, modern, and responsive websites. 
-      My goal is to design solutions that blend creativity with functionality. 
-    </p>
-    <a href="#contact" class="btn">Hire Me</a>
-  </div>
-</section>
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="about-img">
+      <img src="m2.jpg" alt="About Me">
+    </div>
+    <div class="about-text">
+      <span>About Me</span>
+      <h2>Who Am I?</h2>
+      <p>
+        I'm a passionate web developer who loves creating clean, modern, and responsive websites.
+        My goal is to design solutions that blend creativity with functionality.
+      </p>
+      <a href="#contact" class="btn">Hire Me</a>
+    </div>
+  </section>
 
-<!-- Projects Section -->
-<section class="menu" id="projects">
-  <div class="heading">
-    <span>Portfolio</span>
-    <h2>My Projects</h2>
-  </div>
-
-  <div class="cards">
-    <div class="box">
-      <div class="box-img">
-        <img src="f1.jpg" alt="Project 1">
-      </div>
-      <h2>Foodie - College Website Project</h2>
-      <h3>Web Application</h3>
-      <span>HTML | CSS | JS</span>
+  <!-- Projects Section -->
+  <section class="menu" id="projects">
+    <div class="heading">
+      <span>Portfolio</span>
+      <h2>My Projects</h2>
     </div>
 
-    <div class="box">
-      <div class="box-img">
-        <img src="tt.jpg" alt="Project 2">
-      </div>
-      <h2>Tic A Tac A Toe - A Mobile Application College Project</h2>
-      <h3>Mobile App</h3>
-      <span>GODOT</span>
-    </div>
-
-    <div class="box">
-      <div class="box-img">
-        <img src="ff1.jpg" alt="Project 3">
-      </div>
-      <h2>SchoolFund Hub Application For Students</h2>
-      <h3>Design System</h3>
-      <span>Figma | UI/UX</span>
-    </div>
-  </div>
-</section>
-
-<!-- Skills Section -->
-<section class="services" id="skills">
-  <div class="heading">
-    <span>My Skills</span>
-    <h2>What I Do</h2>
-  </div>
-
-  <div class="service-container">
-    <div class="s-box">
-      <i class='bx bx-code-alt'></i>
-      <h3>Web Development</h3>
-      <p>Building responsive and modern websites with HTML, CSS, JavaScript, and frameworks.</p>
-    </div>
-
-    <div class="s-box">
-      <i class='bx bx-mobile'></i>
-      <h3>Mobile Apps</h3>
-      <p>Creating cross-platform apps with React Native for seamless user experience.</p>
-    </div>
-
-    <div class="s-box">
-      <i class='bx bx-paint'></i>
-      <h3>UI/UX Design</h3>
-      <p>Designing intuitive interfaces using Figma and Adobe XD.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Contact/Footer -->
-<section id="contact">
-  <div class="footer">
-    <div class="main">
-      <div class="col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="col">
-        <h4>Contact Info</h4>
-        <ul>
-          <li>Email: robycajulis01@gmail.com</li>
-          <li>Phone: +961 799 6969</li>
-          <li>Location: Malolos City, Bulacan</li>
-        </ul>
-      </div>
-
-      <div class="col">
-        <h4>Follow Me</h4>
-        <div class="social">
-          <a href="#"><i class='bx bxl-facebook'></i></a>
-          <a href="#"><i class='bx bxl-instagram'></i></a>
-          <a href="#"><i class='bx bxl-twitter'></i></a>
-          <a href="#"><i class='bx bxl-github'></i></a>
+    <div class="cards">
+      <div class="box">
+        <div class="box-img">
+          <img src="f1.jpg" alt="Project 1">
         </div>
+        <h2>Foodie - College Website Project</h2>
+        <h3>Web Application</h3>
+        <span>HTML | CSS | JS</span>
+      </div>
+
+      <div class="box">
+        <div class="box-img">
+          <img src="tt.jpg" alt="Project 2">
+        </div>
+        <h2>Tic A Tac A Toe - A Mobile Application College Project</h2>
+        <h3>Mobile App</h3>
+        <span>GODOT</span>
+      </div>
+
+      <div class="box">
+        <div class="box-img">
+          <img src="ff1.jpg" alt="Project 3">
+        </div>
+        <h2>SchoolFund Hub Application For Students</h2>
+        <h3>Design System</h3>
+        <span>Figma | UI/UX</span>
       </div>
     </div>
-  </div>
-</section>
+
+    <div class="box">
+      <div class="box-img">
+        <img src="gsw.png" alt="Project 3">
+      </div>
+      <h2>Gosaveweb</h2>
+      <h3>Web Application</h3>
+      <span>Wordpress</span>
+    </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="services" id="skills">
+    <div class="heading">
+      <span>My Skills</span>
+      <h2>What I Do</h2>
+    </div>
+
+    <div class="service-container">
+      <div class="s-box">
+        <i class='bx bx-code-alt'></i>
+        <h3>Web Development</h3>
+        <p>Building responsive and modern websites with HTML, CSS, JavaScript, and frameworks.</p>
+      </div>
+
+      <div class="s-box">
+        <i class='bx bx-mobile'></i>
+        <h3>Mobile Apps</h3>
+        <p>Creating cross-platform apps with React Native for seamless user experience.</p>
+      </div>
+
+      <div class="s-box">
+        <i class='bx bx-paint'></i>
+        <h3>UI/UX Design</h3>
+        <p>Designing intuitive interfaces using Figma and Adobe XD.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact/Footer -->
+  <section id="contact">
+    <div class="footer">
+      <div class="main">
+        <div class="col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h4>Contact Info</h4>
+          <ul>
+            <li>Email: robycajulis01@gmail.com</li>
+            <li>Phone: +961 799 6969</li>
+            <li>Location: Malolos City, Bulacan</li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h4>Follow Me</h4>
+          <div class="social">
+            <a href="https://www.facebook.com/ILoveYouWithoutHesitations" target="_blank"><i
+                class='bx bxl-facebook'></i></a>
+            <a href="https://www.instagram.com/rubehcajulis/" target="_blank"><i class='bx bxl-instagram'></i></a>
+            <a href="https://x.com/Rubitassen" target="_blank"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://github.com/RobyCajulis" target="_blank"><i class='bx bxl-github'></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
 
-<script src="javascript.js"></script>
+  <script src="javascript.js"></script>
 </body>
+
 </html>

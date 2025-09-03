@@ -1,29 +1,28 @@
-/* ---------- THEME VARIABLES ---------- */
-/* Light (default): softer pinks */
+
 :root {
   --bg-color: #ffffff;
   --text-color: #1f1f1f;
   --muted-text: #666;
-  --main-color: #ff7aa2;     /* lighter pink */
-  --accent-color: #ffc1d6;   /* soft pink for hovers */
-  --card-bg: #f7f7f9;        /* light elevated surfaces */
+  --main-color: #ff7aa2;     
+  --accent-color: #ffc1d6;   
+  --card-bg: #f7f7f9;        
   --border: rgba(0,0,0,0.08);
   --shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
-/* Dark: warm pinks */
+
 body.dark-theme {
   --bg-color: #121216;
   --text-color: #f2f2f3;
   --muted-text: #bdbdc7;
-  --main-color: #e75480;     /* warm pink */
-  --accent-color: #f39ab5;   /* gentle warm hover */
-  --card-bg: #1b1b22;        /* dark elevated surfaces */
+  --main-color: #e75480;     
+  --accent-color: #f39ab5;  
+  --card-bg: #1b1b22;        
   --border: rgba(255,255,255,0.08);
   --shadow: 0 12px 32px rgba(0,0,0,0.45);
 }
 
-/* ---------- GLOBAL RESET ---------- */
+/* color reset */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html, body { height: 100%; }
 body { 
@@ -33,7 +32,7 @@ body {
   transition: background .3s ease, color .3s ease; 
 }
 
-/* ---------- HEADER ---------- */
+/* header */
 header {
   position: fixed;
   inset: 0 0 auto 0;
@@ -76,7 +75,7 @@ header {
 .toggle-theme:hover { background: var(--accent-color); }
 .toggle-theme:active { transform: scale(0.96); }
 
-/* ---------- SECTIONS LAYOUT ---------- */
+/* section layout */
 section { padding: 120px 12%; }
 section:first-of-type { padding-top: 160px; } /* offset for fixed header */
 
@@ -84,7 +83,7 @@ section:first-of-type { padding-top: 160px; } /* offset for fixed header */
 .heading span { color: var(--main-color); font-weight: 600; }
 .heading h2 { font-size: 2rem; }
 
-/* ---------- HOME ---------- */
+/* home */
 .home {
   min-height: calc(100vh - 160px);
   display: grid;
@@ -104,7 +103,7 @@ section:first-of-type { padding-top: 160px; } /* offset for fixed header */
   margin-left: auto;
 }
 
-/* ---------- BUTTON ---------- */
+/* buttons */
 .btn {
   display: inline-block;
   margin-top: 20px;
@@ -120,7 +119,7 @@ section:first-of-type { padding-top: 160px; } /* offset for fixed header */
 body.dark-theme .btn:hover { color: #121216; }
 .btn:active { transform: translateY(1px); }
 
-/* ---------- ABOUT ---------- */
+/* about */
 .about {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -135,10 +134,11 @@ body.dark-theme .btn:hover { color: #121216; }
 .about-text h2 { margin: 8px 0 12px; font-size: 2rem; }
 .about-text p { color: var(--muted-text); line-height: 1.75; }
 
-/* ---------- PROJECTS (CARDS) ---------- */
+/* projects*/
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  padding: 20px;
   gap: 1.6rem;
 }
 .box {
@@ -160,7 +160,7 @@ body.dark-theme .btn:hover { color: #121216; }
 .box h3 { font-size: .95rem; color: var(--muted-text); font-weight: 500; }
 .box span { color: var(--main-color); font-weight: 600; font-size: .95rem; }
 
-/* ---------- SKILLS ---------- */
+/* Skills Section */
 .service-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -180,7 +180,7 @@ body.dark-theme .btn:hover { color: #121216; }
 .s-box h3 { margin-bottom: 8px; }
 .s-box p { color: var(--muted-text); }
 
-/* ---------- FOOTER ---------- */
+/* Footer */
 .footer {
   background: var(--card-bg);
   border-top: 1px solid var(--border);
@@ -197,9 +197,33 @@ body.dark-theme .btn:hover { color: #121216; }
 .social a { color: var(--main-color); font-size: 1.4rem; margin-right: 10px; }
 .social a:hover { color: var(--accent-color); }
 
-/* ---------- RESPONSIVE ---------- */
+/* responsive mode */
 @media (max-width: 980px) {
   .home { grid-template-columns: 1fr; text-align: center; }
   .home-img img { margin: 0 auto; }
   .about { grid-template-columns: 1fr; text-align: center; }
+}
+/* Navigation Hover */
+.navbar a {
+  position: relative;
+  text-decoration: none;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--main-color, #ff4b2b); /* fallback color if variable not set */
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.navbar a.active::after {
+  width: 100%;
 }
