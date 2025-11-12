@@ -23,6 +23,8 @@
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#todo">To-Do</a></li>
+      <li><a href="#news">News</a></li>  <!-- Added News link -->
       <li><a href="#contact">Contact</a></li>
     </ul>
 
@@ -53,7 +55,7 @@
       <span>About Me</span>
       <h2>Who Am I?</h2>
       <p>
-        I'm a passionate web developer and currently 4th Year College Student who loves creating clean, modern, and responsive websites.
+        I'm a passionate web developer and currently 4th Year College who loves creating clean, modern, and responsive websites.
         My goal is to design solutions that blend creativity with functionality.
       </p>
       <a href="#contact" class="btn">Hire Me</a>
@@ -104,7 +106,6 @@
       <h3>Web Application</h3>
       <span>Wordpress</span>
     </div>
-    </div>
   </section>
 
   <!-- Skills Section -->
@@ -135,6 +136,34 @@
     </div>
   </section>
 
+  <!-- To-Do Section -->
+  <section class="services" id="todo">
+    <div class="heading">
+      <span>To-Do List</span>
+      <h2>Manage Your Tasks</h2>
+    </div>
+    <div class="todo-container">
+      <input type="text" id="task-input" placeholder="Add a new task..." />
+      <button id="add-task-btn" class="btn">Add Task</button>
+      <ul id="task-list"></ul>
+    </div>
+  </section>
+
+  <!-- News Section (Added) -->
+  <section class="services" id="news">
+    <div class="heading">
+      <span>News</span>
+      <h2>Latest Headlines</h2>
+    </div>
+    <div class="news-container">
+      <input type="text" id="news-input" placeholder="Enter topic (e.g., technology)" value="technology" />
+      <button id="get-news-btn" class="btn">Get News</button>
+      <div id="news-display" class="news-articles">
+        <!-- News articles will be inserted here -->
+      </div>
+    </div>
+  </section>
+
   <!-- Contact/Footer -->
   <section id="contact">
     <div class="footer">
@@ -146,6 +175,8 @@
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#todo">To-Do</a></li>
+            <li><a href="#news">News</a></li>  <!-- Added News link -->
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -162,18 +193,15 @@
         <div class="col">
           <h4>Follow Me</h4>
           <div class="social">
-            <a href="https://www.facebook.com/ILoveYouWithoutHesitations" target="_blank"><i
-                class='bx bxl-facebook'></i></a>
+            <a href="https://www.facebook.com/ILoveYouWithoutHesitations" target="_blank"><i class='bx bxl-facebook'></i></a>
             <a href="https://www.instagram.com/rubehcajulis/" target="_blank"><i class='bx bxl-instagram'></i></a>
             <a href="https://x.com/Rubitassen" target="_blank"><i class="fab fa-x-twitter"></i></a>
             <a href="https://github.com/RobyCajulis" target="_blank"><i class='bx bxl-github'></i></a>
           </div>
         </div>
-
       </div>
     </div>
   </section>
-
 
   <script src="javascript.js"></script>
 </body>
