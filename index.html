@@ -17,18 +17,17 @@
   <!-- Header -->
   <header>
     <a href="#" class="logo">MyPortfolio</a>
-
     <ul class="navbar">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#todo">To-Do</a></li>
-      <li><a href="#news">News</a></li>  <!-- Added News link -->
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#projects">Projects</a></li>
+  <li><a href="#skills">Skills</a></li>
+  <li><a href="#todo">To-Do</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="admin-login.html" style="color: var(--main-color); font-weight: 600;">Admin Login</a></li> <!-- Added -->
+</ul>
 
-    <!-- darkmode light mode -->
     <button class="toggle-theme" id="theme-toggle" aria-label="Toggle theme">
       <i class='bx bx-moon' id="theme-icon" aria-hidden="true"></i>
     </button>
@@ -68,43 +67,8 @@
       <span>Portfolio</span>
       <h2>My Projects</h2>
     </div>
-
-    <div class="cards">
-      <div class="box">
-        <div class="box-img">
-          <img src="f1.jpg" alt="Project 1">
-        </div>
-        <h2>Foodie - College Website Project</h2>
-        <h3>Web Application</h3>
-        <span>HTML | CSS | JS</span>
-      </div>
-
-      <div class="box">
-        <div class="box-img">
-          <img src="tt.jpg" alt="Project 2">
-        </div>
-        <h2>Tic A Tac A Toe - A Mobile Application College Project</h2>
-        <h3>Mobile App</h3>
-        <span>GODOT</span>
-      </div>
-
-      <div class="box">
-        <div class="box-img">
-          <img src="ff1.jpg" alt="Project 3">
-        </div>
-        <h2>SchoolFund Hub Application For Students</h2>
-        <h3>Design System</h3>
-        <span>Figma | UI/UX</span>
-      </div>
-    </div>
-
-    <div class="box">
-      <div class="box-img">
-        <img src="gsw.png" alt="Project 3">
-      </div>
-      <h2>Gosaveweb</h2>
-      <h3>Web Application</h3>
-      <span>Wordpress</span>
+    <div class="cards" id="projects-container">
+      <!-- Projects will load dynamically -->
     </div>
   </section>
 
@@ -114,20 +78,17 @@
       <span>My Skills</span>
       <h2>What I Do</h2>
     </div>
-
     <div class="service-container">
       <div class="s-box">
         <i class='bx bx-code-alt'></i>
         <h3>Web Development</h3>
         <p>Building responsive and modern websites with HTML, CSS, JavaScript, and frameworks.</p>
       </div>
-
       <div class="s-box">
         <i class='bx bx-mobile'></i>
         <h3>Mobile Apps</h3>
         <p>Creating cross-platform apps with React Native for seamless user experience.</p>
       </div>
-
       <div class="s-box">
         <i class='bx bx-paint'></i>
         <h3>UI/UX Design</h3>
@@ -149,7 +110,7 @@
     </div>
   </section>
 
-  <!-- News Section (Added) -->
+  <!-- News Section -->
   <section class="services" id="news">
     <div class="heading">
       <span>News</span>
@@ -158,52 +119,56 @@
     <div class="news-container">
       <input type="text" id="news-input" placeholder="Enter topic (e.g., technology)" value="technology" />
       <button id="get-news-btn" class="btn">Get News</button>
-      <div id="news-display" class="news-articles">
-        <!-- News articles will be inserted here -->
-      </div>
+      <div id="news-display" class="news-articles"></div>
     </div>
   </section>
 
-  <!-- Contact/Footer -->
-  <section id="contact">
-    <div class="footer">
-      <div class="main">
-        <div class="col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#todo">To-Do</a></li>
-            <li><a href="#news">News</a></li>  <!-- Added News link -->
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
+  <!-- Contact Section -->
+<section id="contact">
+  <div class="contact-card" style="max-width:600px; margin:50px auto; padding:20px; background-color:var(--card-bg); border-radius:14px; box-shadow:var(--shadow); text-align:center;">
+    <h2>Contact Me</h2>
+    <input type="text" id="contact-name" placeholder="Your Name" style="width:100%; padding:10px; margin-bottom:10px;"><br>
+    <input type="email" id="contact-email" placeholder="Your Email" style="width:100%; padding:10px; margin-bottom:10px;"><br>
+    <textarea id="contact-message" placeholder="Your Message" rows="5" style="width:100%; padding:10px; margin-bottom:10px;"></textarea><br>
+    <button id="send-message-btn" class="btn">Send Message</button>
+    <p id="contact-feedback" style="margin-top:10px;"></p>
+  </div>
+</section>
 
-        <div class="col">
-          <h4>Contact Info</h4>
-          <ul>
-            <li>Email: robycajulis01@gmail.com</li>
-            <li>Phone: +961 799 6969</li>
-            <li>Location: Malolos City, Bulacan</li>
-          </ul>
-        </div>
-
-        <div class="col">
-          <h4>Follow Me</h4>
-          <div class="social">
-            <a href="https://www.facebook.com/ILoveYouWithoutHesitations" target="_blank"><i class='bx bxl-facebook'></i></a>
-            <a href="https://www.instagram.com/rubehcajulis/" target="_blank"><i class='bx bxl-instagram'></i></a>
-            <a href="https://x.com/Rubitassen" target="_blank"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://github.com/RobyCajulis" target="_blank"><i class='bx bxl-github'></i></a>
-          </div>
-        </div>
+<!-- Footer -->
+<section class="footer">
+  <div class="main">
+    <div class="col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#todo">To-Do</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Contact Info</h4>
+      <ul>
+        <li>Email: robycajulis01@gmail.com</li>
+        <li>Phone: +961 799 6969</li>
+        <li>Location: Malolos City, Bulacan</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Follow Me</h4>
+      <div class="social">
+        <a href="https://www.facebook.com/ILoveYouWithoutHesitations" target="_blank"><i class='bx bxl-facebook'></i></a>
+        <a href="https://www.instagram.com/rubehcajulis/" target="_blank"><i class='bx bxl-instagram'></i></a>
+        <a href="https://x.com/Rubitassen" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://github.com/RobyCajulis" target="_blank"><i class='bx bxl-github'></i></a>
       </div>
     </div>
-  </section>
-
+  </div>
+</section>
   <script src="javascript.js"></script>
 </body>
-
 </html>

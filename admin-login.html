@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section class="admin-card">
+  <h2>Admin Login</h2>
+  <input type="text" id="username" placeholder="Username"><br>
+  <input type="password" id="password" placeholder="Password"><br>
+  <button id="login-btn">Login</button>
+  <p id="login-error" style="color:red;"></p>
+</section>
+
+
+<script>
+document.getElementById("login-btn").addEventListener("click", async () => {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  const res = await fetch("/api/admin/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username, password })
+  });
+  const data = await res.json();
+  if (data.success) {
+    localStorage.setItem("adminToken", data.token);
+    window.location.href = "admin-dashboard.html";
+  } else {
+    document.getElementById("login-error").innerText = data.message;
+  }
+});
+</script>
+</body>
+</html>

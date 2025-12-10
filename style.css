@@ -412,3 +412,85 @@ body.dark-theme .btn:hover {
     text-align: center;
   }
 }
+
+/* Admin Login */
+.admin-card {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.admin-card input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.admin-card button {
+  padding: 10px 20px;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: 0.25s;
+}
+
+.admin-card button:hover {
+  background-color: var(--accent-color);
+  color: #1f1f1f;
+}
+
+
+/* Admin Dashboard */
+.dashboard-card {
+  background-color: var(--card-bg);
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.dashboard-card h2 {
+  color: var(--main-color);
+  margin-bottom: 15px;
+}
+
+.dashboard-card input {
+  padding: 8px;
+  margin-right: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.dashboard-card button {
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--main-color);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.dashboard-card button:hover {
+  background-color: var(--accent-color);
+  color: #1f1f1f;
+}
+
+.dashboard-card img {
+  max-width: 100px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.dashboard-card div {
+  margin-bottom: 10px;
+}

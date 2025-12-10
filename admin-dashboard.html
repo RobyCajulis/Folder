@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* Dashboard card design */
+.dashboard-card {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.dashboard-card h2 {
+  color: var(--main-color);
+  margin-bottom: 12px;
+}
+
+.dashboard-card input {
+  margin: 5px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.dashboard-card button {
+  margin: 5px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--main-color);
+  color: #fff;
+  transition: background-color 0.25s ease;
+}
+
+.dashboard-card button:hover {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+}
+
+#project-list div, #task-list-dashboard li, #message-list li {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+</style>
+</head>
+<body>
+
+<section class="dashboard-card">
+  <h2>Manage Projects</h2>
+  <input id="p-title" placeholder="Project Title">
+  <input id="p-desc" placeholder="Description">
+  <input id="p-img" placeholder="Image URL">
+  <button onclick="addProject()">Add Project</button>
+  <button id="logout-btn" style="float:right;">Logout</button>
+  <div id="project-list"></div>
+</section>
+
+<section class="dashboard-card">
+  <h2>Manage Tasks</h2>
+  <ul id="task-list-dashboard"></ul>
+</section>
+
+<section class="dashboard-card">
+  <h2>Messages</h2>
+  <ul id="message-list"></ul>
+</section>
+
+<script>
+const token = localStorage.getItem("adminToken");
+if (!token) window.location.href = "admin-login.html";
+
+/* Logout */
+document.getElementById("logout-btn").addEventListener("click", () => {
+  localStorage.removeItem("adminToken");
+  window.location.href = "admin-login.html";
+});
+
+/* Projects */
+async function loadProjects() {
+  const res = await fetch("/api/projects");
+  const projects = await res.json();
+  const container = document.getElementById("project-list");
+  container.innerHTML = "";
+  projects.forEach(p => {
+    const div = document.createElement("div");
+    div.innerHTML = `
+      <span>
+        <img src="${p.img}" width="100" style="margin-right:10px;">
+        <strong>${p.title}</strong> - ${p.desc}
+      </span>
+      <span>
+        <button onclick="deleteProject(${p.id})">Delete</button>
+      </span>`;
+    container.appendChild(div);
+  });
+}
+
+async function addProject() {
+  const title = document.getElementById("p-title").value;
+  const desc = document.getElementById("p-desc").value;
+  const img = document.getElementById("p-img").value;
+  if(!title || !desc || !img) return alert("Fill all fields!");
+  await fetch("/api/projects", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "Authorization": token },
+    body: JSON.stringify({ title, desc, img })
+  });
+  document.getElementById("p-title").value = "";
+  document.getElementById("p-desc").value = "";
+  document.getElementById("p-img").value = "";
+  loadProjects();
+}
+
+async function deleteProject(id) {
+  await fetch(`/api/projects/${id}`, { method: "DELETE", headers: { "Authorization": token } });
+  loadProjects();
+}
+
+loadProjects();
+
+/* Tasks */
+async function loadTasks() {
+  const res = await fetch("/api/tasks");
+  const tasks = await res.json();
+  const list = document.getElementById("task-list-dashboard");
+  list.innerHTML = "";
+  tasks.forEach(t => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <span>${t.title} [${t.completed ? "Done" : "Pending"}]</span>
+      <span>
+        <button onclick="toggleTask(${t.id})">Toggle</button>
+        <button onclick="deleteTask(${t.id})">Delete</button>
+      </span>`;
+    list.appendChild(li);
+  });
+}
+
+async function toggleTask(id) {
+  await fetch(`/api/tasks/${id}`, { method: "PUT" });
+  loadTasks();
+}
+
+async function deleteTask(id) {
+  await fetch(`/api/tasks/${id}`, { method: "DELETE" });
+  loadTasks();
+}
+
+loadTasks();
+
+/* Messages */
+async function loadMessages() {
+  const res = await fetch("/api/messages", { headers: { "Authorization": token } });
+  const messages = await res.json();
+  const list = document.getElementById("message-list");
+  list.innerHTML = "";
+  messages.forEach(m => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <span>${m.name} (${m.email}): ${m.message}</span>
+      <span><button onclick="deleteMessage(${m.id})">Delete</button></span>`;
+    list.appendChild(li);
+  });
+}
+
+async function deleteMessage(id) {
+  await fetch(`/api/messages/${id}`, { method: "DELETE", headers: { "Authorization": token } });
+  loadMessages();
+}
+
+loadMessages();
+</script>
+</body>
+</html>
