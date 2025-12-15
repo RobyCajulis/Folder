@@ -5,6 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
+
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,38 +15,40 @@
 </head>
 
 <body>
+
   <!-- Header -->
   <header>
-    <a href="#" class="logo">MyPortfolio</a>
+    <!-- LOGO (SECRET ADMIN ACCESS) -->
+    <a href="#" class="logo" id="admin-logo">MyPortfolio</a>
+
     <ul class="navbar">
-  <li><a href="#home">Home</a></li>
-  <li><a href="#about">About</a></li>
-  <li><a href="#projects">Projects</a></li>
-  <li><a href="#skills">Skills</a></li>
-  <li><a href="#todo">To-Do</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="admin-login.html" style="color: var(--main-color); font-weight: 600;">Admin Login</a></li> <!-- Added -->
-</ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#todo">To-Do</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
 
     <button class="toggle-theme" id="theme-toggle" aria-label="Toggle theme">
-      <i class='bx bx-moon' id="theme-icon" aria-hidden="true"></i>
+      <i class='bx bx-moon' id="theme-icon"></i>
     </button>
   </header>
 
-  <!-- Home Section -->
+  <!-- Home -->
   <section class="home" id="home">
     <div class="home-text">
-      <h1>Hello, I'm <span>Rossbrent J.Cajulis</span></h1>
+      <h1>Hello, I'm <span>Rossbrent J. Cajulis</span></h1>
       <h2>Aspiring Web Developer & Designer</h2>
       <a href="#projects" class="btn">View My Work</a>
     </div>
     <div class="home-img">
-      <img src="neckless.png" alt="Your Profile Picture">
+      <img src="neckless.png" alt="Profile Picture">
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- About -->
   <section class="about" id="about">
     <div class="about-img">
       <img src="m2.jpg" alt="About Me">
@@ -54,55 +57,55 @@
       <span>About Me</span>
       <h2>Who Am I?</h2>
       <p>
-        I'm a passionate web developer and currently 4th Year College who loves creating clean, modern, and responsive websites.
-        My goal is to design solutions that blend creativity with functionality.
+        I'm a passionate web developer and a 4th Year College student who enjoys creating clean,
+        modern, and responsive websites.
       </p>
       <a href="#contact" class="btn">Hire Me</a>
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Projects -->
   <section class="menu" id="projects">
     <div class="heading">
       <span>Portfolio</span>
       <h2>My Projects</h2>
     </div>
-    <div class="cards" id="projects-container">
-      <!-- Projects will load dynamically -->
-    </div>
+    <div class="cards" id="projects-container"></div>
   </section>
 
-  <!-- Skills Section -->
+  <!-- Skills -->
   <section class="services" id="skills">
     <div class="heading">
       <span>My Skills</span>
       <h2>What I Do</h2>
     </div>
+
     <div class="service-container">
       <div class="s-box">
         <i class='bx bx-code-alt'></i>
         <h3>Web Development</h3>
-        <p>Building responsive and modern websites with HTML, CSS, JavaScript, and frameworks.</p>
+        <p>HTML, CSS, JavaScript, and modern frameworks.</p>
       </div>
       <div class="s-box">
         <i class='bx bx-mobile'></i>
         <h3>Mobile Apps</h3>
-        <p>Creating cross-platform apps with React Native for seamless user experience.</p>
+        <p>Cross-platform mobile apps.</p>
       </div>
       <div class="s-box">
         <i class='bx bx-paint'></i>
         <h3>UI/UX Design</h3>
-        <p>Designing intuitive interfaces using Figma and Adobe XD.</p>
+        <p>Clean and user-friendly designs.</p>
       </div>
     </div>
   </section>
 
-  <!-- To-Do Section -->
+  <!-- To-Do -->
   <section class="services" id="todo">
     <div class="heading">
       <span>To-Do List</span>
       <h2>Manage Your Tasks</h2>
     </div>
+
     <div class="todo-container">
       <input type="text" id="task-input" placeholder="Add a new task..." />
       <button id="add-task-btn" class="btn">Add Task</button>
@@ -110,65 +113,32 @@
     </div>
   </section>
 
-  <!-- News Section -->
+  <!-- News -->
   <section class="services" id="news">
     <div class="heading">
       <span>News</span>
       <h2>Latest Headlines</h2>
     </div>
+
     <div class="news-container">
-      <input type="text" id="news-input" placeholder="Enter topic (e.g., technology)" value="technology" />
+      <input type="text" id="news-input" value="technology">
       <button id="get-news-btn" class="btn">Get News</button>
-      <div id="news-display" class="news-articles"></div>
+      <div id="news-display"></div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-<section id="contact">
-  <div class="contact-card" style="max-width:600px; margin:50px auto; padding:20px; background-color:var(--card-bg); border-radius:14px; box-shadow:var(--shadow); text-align:center;">
-    <h2>Contact Me</h2>
-    <input type="text" id="contact-name" placeholder="Your Name" style="width:100%; padding:10px; margin-bottom:10px;"><br>
-    <input type="email" id="contact-email" placeholder="Your Email" style="width:100%; padding:10px; margin-bottom:10px;"><br>
-    <textarea id="contact-message" placeholder="Your Message" rows="5" style="width:100%; padding:10px; margin-bottom:10px;"></textarea><br>
-    <button id="send-message-btn" class="btn">Send Message</button>
-    <p id="contact-feedback" style="margin-top:10px;"></p>
-  </div>
-</section>
+  <!-- Contact -->
+  <section id="contact">
+    <div class="contact-card">
+      <h2>Contact Me</h2>
+      <input type="text" id="contact-name" placeholder="Your Name">
+      <input type="email" id="contact-email" placeholder="Your Email">
+      <textarea id="contact-message" rows="5" placeholder="Your Message"></textarea>
+      <button id="send-message-btn" class="btn">Send Message</button>
+      <p id="contact-feedback"></p>
+    </div>
+  </section>
 
-<!-- Footer -->
-<section class="footer">
-  <div class="main">
-    <div class="col">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#todo">To-Do</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-    <div class="col">
-      <h4>Contact Info</h4>
-      <ul>
-        <li>Email: robycajulis01@gmail.com</li>
-        <li>Phone: +961 799 6969</li>
-        <li>Location: Malolos City, Bulacan</li>
-      </ul>
-    </div>
-    <div class="col">
-      <h4>Follow Me</h4>
-      <div class="social">
-        <a href="https://www.facebook.com/ILoveYouWithoutHesitations" target="_blank"><i class='bx bxl-facebook'></i></a>
-        <a href="https://www.instagram.com/rubehcajulis/" target="_blank"><i class='bx bxl-instagram'></i></a>
-        <a href="https://x.com/Rubitassen" target="_blank"><i class="fab fa-x-twitter"></i></a>
-        <a href="https://github.com/RobyCajulis" target="_blank"><i class='bx bxl-github'></i></a>
-      </div>
-    </div>
-  </div>
-</section>
   <script src="javascript.js"></script>
 </body>
 </html>
