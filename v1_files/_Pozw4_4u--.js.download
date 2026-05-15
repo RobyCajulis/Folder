@@ -1,0 +1,4 @@
+;/*FB_PKG_DELIM*/
+
+__d("FanFundingStarsEventsTypedLoggerLite",["generateLiteTypedLogger"],(function(a,b,c,d,e,f){"use strict";e.exports=b("generateLiteTypedLogger")("logger:FanFundingStarsEventsLoggerConfig")}),null);
+__d("StarsViewerFunnelEventFalcoEvent",["FalcoLoggerInternal","getFalcoLogPolicy_DO_NOT_USE"],(function(a,b,c,d,e,f,g){"use strict";a=c("getFalcoLogPolicy_DO_NOT_USE")("6440");b=d("FalcoLoggerInternal").create("stars_viewer_funnel_event",a);e=b;g["default"]=e}),98);

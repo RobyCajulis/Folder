@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <!-- LOGO (SECRET ADMIN ACCESS) -->
+    <a href="#" class="logo" id="admin-logo">MyPortfolio</a>
+
+    <ul class="navbar">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#todo">To-Do</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <button class="toggle-theme" id="theme-toggle" aria-label="Toggle theme">
+      <i class='bx bx-moon' id="theme-icon"></i>
+    </button>
+  </header>
+
+  <!-- Home -->
+  <section class="home" id="home">
+    <div class="home-text">
+      <h1>Hello, I'm <span>Rossbrent J. Cajulis</span></h1>
+      <h2>Aspiring Web Developer & Designer</h2>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+    <div class="home-img">
+      <img src="neckless.png" alt="Profile Picture">
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="about-img">
+      <img src="m2.jpg" alt="About Me">
+    </div>
+    <div class="about-text">
+      <span>About Me</span>
+      <h2>Who Am I?</h2>
+      <p>
+        I'm a passionate web developer and a 4th Year College student who enjoys creating clean,
+        modern, and responsive websites.
+      </p>
+      <a href="#contact" class="btn">Hire Me</a>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="menu" id="projects">
+    <div class="heading">
+      <span>Portfolio</span>
+      <h2>My Projects</h2>
+    </div>
+    <div class="cards" id="projects-container"></div>
+  </section>
+
+  <!-- Skills -->
+  <section class="services" id="skills">
+    <div class="heading">
+      <span>My Skills</span>
+      <h2>What I Do</h2>
+    </div>
+
+    <div class="service-container">
+      <div class="s-box">
+        <i class='bx bx-code-alt'></i>
+        <h3>Web Development</h3>
+        <p>HTML, CSS, JavaScript, and modern frameworks.</p>
+      </div>
+      <div class="s-box">
+        <i class='bx bx-mobile'></i>
+        <h3>Mobile Apps</h3>
+        <p>Cross-platform mobile apps.</p>
+      </div>
+      <div class="s-box">
+        <i class='bx bx-paint'></i>
+        <h3>UI/UX Design</h3>
+        <p>Clean and user-friendly designs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- To-Do -->
+  <section class="services" id="todo">
+    <div class="heading">
+      <span>To-Do List</span>
+      <h2>Manage Your Tasks</h2>
+    </div>
+
+    <div class="todo-container">
+      <input type="text" id="task-input" placeholder="Add a new task..." />
+      <button id="add-task-btn" class="btn">Add Task</button>
+      <ul id="task-list"></ul>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section class="services" id="news">
+    <div class="heading">
+      <span>News</span>
+      <h2>Latest Headlines</h2>
+    </div>
+
+    <div class="news-container">
+      <input type="text" id="news-input" value="technology">
+      <button id="get-news-btn" class="btn">Get News</button>
+      <div id="news-display"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="contact-card">
+      <h2>Contact Me</h2>
+      <input type="text" id="contact-name" placeholder="Your Name">
+      <input type="email" id="contact-email" placeholder="Your Email">
+      <textarea id="contact-message" rows="5" placeholder="Your Message"></textarea>
+      <button id="send-message-btn" class="btn">Send Message</button>
+      <p id="contact-feedback"></p>
+    </div>
+  </section>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
