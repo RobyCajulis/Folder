@@ -12,6 +12,22 @@
       "dest": "server.js"
     },
     {
+      "src": "/style.css",
+      "dest": "style.css"
+    },
+    {
+      "src": "/javascript.js",
+      "dest": "javascript.js"
+    },
+    {
+      "src": "/neckless.png",
+      "dest": "neckless.png"
+    },
+    {
+      "src": "/m2.jpg",
+      "dest": "m2.jpg"
+    },
+    {
       "src": "/(.*)",
       "dest": "server.js"
     }
