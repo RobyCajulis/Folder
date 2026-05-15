@@ -4,32 +4,35 @@
     {
       "src": "server.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "style.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "javascript.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.png",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "server.js"
+      "dest": "/server.js"
     },
     {
-      "src": "/style.css",
-      "dest": "style.css"
-    },
-    {
-      "src": "/javascript.js",
-      "dest": "javascript.js"
-    },
-    {
-      "src": "/neckless.png",
-      "dest": "neckless.png"
-    },
-    {
-      "src": "/m2.jpg",
-      "dest": "m2.jpg"
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
-      "dest": "server.js"
+      "dest": "/index.html"
     }
   ]
 }
